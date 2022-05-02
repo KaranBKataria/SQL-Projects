@@ -71,7 +71,7 @@ hotel as Hotel_Type,
 from Hotel 
 group by arrival_date_year, hotel;
 
---However, we must note further analysis is needed to answer the above and need to perform EDA
+--However, we must note further analysis is needed to answer the above by performing EDA
 
 
 

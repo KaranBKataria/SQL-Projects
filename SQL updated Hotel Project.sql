@@ -1,7 +1,10 @@
 /* 
 Analysing Data in SQL
 
-Stakeholder question: Is revenue growing year-on-year?
+In this project we wish extract various peices of data from a database using SQL for a hotel 
+chain to answer business-related queries. 
+
+Stakeholder question 1: Is revenue growing year-on-year?
 
 */
 

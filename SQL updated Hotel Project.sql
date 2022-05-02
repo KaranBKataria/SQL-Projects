@@ -20,7 +20,6 @@ select * from dbo.['2020$'])
 
 --Here we combine the total number of stays in nights  
 
-
 select stays_in_week_nights + stays_in_weekend_nights as Revenue
 from Hotel;
 -----------------------------------------------------------------------------------------------------
@@ -45,6 +44,24 @@ group by arrival_date_year;
 -----------------------------------------------------------------------------------------------------
 
 --We can also go further and determine the revenue generated grouped by year (2018-2020) and hotel type 
+
+select 
+arrival_date_year as Year,
+hotel as Hotel_Type,
+sum((stays_in_week_nights + stays_in_weekend_nights)*adr)) as Revenue
+from Hotel
+group by arrival_date_year, hotel;
+
+-----------------------------------------------------------------------------------------------------
+
+-- Final code 
+
+with Hotel as (
+select * from dbo.[2018]
+union
+select * from dbo.['2019$']
+union 
+select * from dbo.['2020$'])
 
 select 
 arrival_date_year as Year,

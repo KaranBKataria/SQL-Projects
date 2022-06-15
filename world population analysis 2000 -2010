@@ -1,0 +1,53 @@
+-- What is the largest population size for Gabon between 2000 and 2010?
+
+select max(population) 
+from population_years
+where country = 'Gabon';
+
+-- A: 1.54526 Million
+
+--------------------------------------------------------
+
+-- What were the 10 lowest populated countries in 2005?
+
+select population, country, year from population_years
+where year = 2005
+order by population asc
+limit 10;
+
+--A: (In ascending order) Niue, Falkland Islands, Montserrat, Saint Pierre and Miquelon, Saint Helena, Nauru, Cook Islands, Turks and Caicos Islands, Virgin Islands & Gibraltar.
+
+--------------------------------------------------------
+-- Countries with a population over 100 million in 2010? 
+
+select distinct country, population from population_years
+where year = 2010 and population > 100
+order by population asc;
+
+--A: (In acending order) Mexico, Japan, Russia, Nigeria, Bangladesh, Pakistan, Brazil, Indonesia, United States, India & China.
+
+---------------------------------------------------------
+-- How many countries in this dataset have the word "Islands" in their name?
+
+select distinct country from population_years 
+where country like '%islands%';
+
+-- A: 9 Countries in the database have the word "Islands" in their name.
+
+---------------------------------------------------------
+--What is the difference in population between 2000 and 2010 in Indonesia?
+
+select * from population_years
+where country = 'Indonesia'
+order by year;
+
+-- A: The difference in population is roughly 28 million
+
+
+
+
+
+
+
+
+

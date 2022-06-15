@@ -1,3 +1,5 @@
+
+
 -- What is the largest population size for Gabon between 2000 and 2010?
 
 select max(population) 

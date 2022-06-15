@@ -44,7 +44,7 @@ select * from population_years
 where country = 'Indonesia'
 order by year;
 
--- A: The difference in population is roughly 28 million
+-- A: The difference in population is roughly (+) 28 million people 
 
 
 
